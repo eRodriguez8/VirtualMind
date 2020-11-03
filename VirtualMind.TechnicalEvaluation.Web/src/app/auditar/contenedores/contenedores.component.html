@@ -1,0 +1,19 @@
+<table datatable [dtOptions]="dtContenedores" class="table table-striped table-responsive table-condensed table-hover table-ContectCenter">
+	<thead class="bluebackground white-text">
+		<tr>
+			<th *ngFor="let head of headElements" scope="col"> {{ head }} </th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr mdbTableCol *ngFor="let item of contenedores" scope="col">
+			<td> {{ item.id }} </td>
+			<td> {{ item.idregion }} </td>
+			<td> {{ item.etiqueta }} </td>
+			<td> {{ item.codigoarticulo }} </td>
+			<td> {{ item.nombreSector }} </td>
+			<td> {{ item.nombreIncidencia }} </td>
+			<td> {{ item.legajo }} </td>
+			<td> {{ item.fecharegistro | date: 'dd/MM/yyyy' }} </td>
+		</tr>
+	</tbody>
+</table>

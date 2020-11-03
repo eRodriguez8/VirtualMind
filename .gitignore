@@ -1,0 +1,17 @@
+.vs/
+bin/
+obj/
+TestResults/
+packages/
+*.suo
+*.user
+obj
+bin
+node_modules/
+Sua.Auditoria.DB/Sua.Auditoria.DB.dbmdl
+Sua.Auditoria.DB/Sua.Auditoria.DB.jfm
+*.jfm
+/Sua.Auditoria.Api/Logs
+/Sua.Auditoria.Pocket/Logs
+/Publish
+/Logs

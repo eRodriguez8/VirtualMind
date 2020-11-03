@@ -1,0 +1,1 @@
+Bienvenidos al Gitlab Corporativo para iniciar puedes ver el siguiente Readme explicativo: http://gitlab.cencosud.corp/snippets/15
