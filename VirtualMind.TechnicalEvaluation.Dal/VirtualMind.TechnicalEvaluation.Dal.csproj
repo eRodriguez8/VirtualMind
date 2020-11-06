@@ -73,84 +73,66 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AuditoriaSUAContext.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AuditoriaSUAContext.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AuditoriaSUAContext.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AuditoriaSUAContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AuditoriaSUAContext.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AuditoriaSUAContext.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="AUD_dContenedores.cs">
-      <DependentUpon>AuditoriaSUAContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AUD_dIncidencias.cs">
-      <DependentUpon>AuditoriaSUAContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AUD_dLimpieza.cs">
-      <DependentUpon>AuditoriaSUAContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AUD_dPosiciones.cs">
-      <DependentUpon>AuditoriaSUAContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AUD_dSectores.cs">
-      <DependentUpon>AuditoriaSUAContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AUD_sTiposAuditoria.cs">
-      <DependentUpon>AuditoriaSUAContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DatosVolumetricos.cs">
-      <DependentUpon>AuditoriaSUAContext.tt</DependentUpon>
-    </Compile>
     <Compile Include="GenericRepository.cs" />
     <Compile Include="Interfaces\IGenericRepository.cs" />
-    <Compile Include="Interfaces\IUOW_CDsDB.cs" />
-    <Compile Include="PosicionDeArticulos.cs">
-      <DependentUpon>AuditoriaSUAContext.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Interfaces\IUOW_VirtualMindDb.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UOW_CDsDB.cs" />
+    <Compile Include="UOW_VirtualMindDb.cs" />
+    <Compile Include="UserInformation.cs">
+      <DependentUpon>VirtualMindModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserTransaction.cs">
+      <DependentUpon>VirtualMindModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VirtualMindModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VirtualMindModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VirtualMindModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VirtualMindModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VirtualMindModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VirtualMindModel.edmx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config">
       <SubType>Designer</SubType>
     </None>
-    <EntityDeploy Include="AuditoriaSUAContext.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>AuditoriaSUAContext.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="AuditoriaSUAContext.edmx.diagram">
-      <DependentUpon>AuditoriaSUAContext.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
+    <EntityDeploy Include="VirtualMindModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>VirtualMindModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="VirtualMindModel.edmx.diagram">
+      <DependentUpon>VirtualMindModel.edmx</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="AuditoriaSUAContext.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>AuditoriaSUAContext.edmx</DependentUpon>
-      <LastGenOutput>AuditoriaSUAContext.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="AuditoriaSUAContext.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>AuditoriaSUAContext.edmx</DependentUpon>
-      <LastGenOutput>AuditoriaSUAContext.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\VirtualMind.TechnicalEvaluation.Entities\VirtualMind.TechnicalEvaluation.Entities.csproj">
       <Project>{36d71838-cb86-4aff-84f2-0bf8586b73ee}</Project>
       <Name>Sua.Auditoria.Entities</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="VirtualMindModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>VirtualMindModel.edmx</DependentUpon>
+      <LastGenOutput>VirtualMindModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="VirtualMindModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>VirtualMindModel.edmx</DependentUpon>
+      <LastGenOutput>VirtualMindModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

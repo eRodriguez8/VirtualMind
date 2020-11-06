@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="VirtualMindModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="UserInformation">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="firstname" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="lastname" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="birthdate" Type="datetime" />
+          <Property Name="age" Type="int" />
+          <Property Name="dni" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="ts" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserTransaction">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idUsuario" Type="int" Nullable="false" />
+          <Property Name="amount" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="isoCurrency" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="price" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ts" Type="datetime" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__UserTrans__idUsu__1273C1CD">
+          <End Role="UserInformation" Type="Self.UserInformation" Multiplicity="1" />
+          <End Role="UserTransaction" Type="Self.UserTransaction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserInformation">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="UserTransaction">
+              <PropertyRef Name="idUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="VirtualMindModelStoreContainer">
+          <EntitySet Name="UserInformation" EntityType="Self.UserInformation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserTransaction" EntityType="Self.UserTransaction" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__UserTrans__idUsu__1273C1CD" Association="Self.FK__UserTrans__idUsu__1273C1CD">
+            <End Role="UserInformation" EntitySet="UserInformation" />
+            <End Role="UserTransaction" EntitySet="UserTransaction" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="VirtualMindModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="UserInformation">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="firstname" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="lastname" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="birthdate" Type="DateTime" Precision="3" />
+          <Property Name="age" Type="Int32" />
+          <Property Name="dni" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ts" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="UserTransaction" Relationship="Self.FK__UserTrans__idUsu__1273C1CD" FromRole="UserInformation" ToRole="UserTransaction" />
+        </EntityType>
+        <EntityType Name="UserTransaction">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idUsuario" Type="Int32" Nullable="false" />
+          <Property Name="amount" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="isoCurrency" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="price" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ts" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="UserInformation" Relationship="Self.FK__UserTrans__idUsu__1273C1CD" FromRole="UserTransaction" ToRole="UserInformation" />
+        </EntityType>
+        <Association Name="FK__UserTrans__idUsu__1273C1CD">
+          <End Role="UserInformation" Type="Self.UserInformation" Multiplicity="1" />
+          <End Role="UserTransaction" Type="Self.UserTransaction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserInformation">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="UserTransaction">
+              <PropertyRef Name="idUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="VirtualMindEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="UserInformation" EntityType="Self.UserInformation" />
+          <EntitySet Name="UserTransaction" EntityType="Self.UserTransaction" />
+          <AssociationSet Name="FK__UserTrans__idUsu__1273C1CD" Association="Self.FK__UserTrans__idUsu__1273C1CD">
+            <End Role="UserInformation" EntitySet="UserInformation" />
+            <End Role="UserTransaction" EntitySet="UserTransaction" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="VirtualMindModelStoreContainer" CdmEntityContainer="VirtualMindEntities">
+          <EntitySetMapping Name="UserInformation">
+            <EntityTypeMapping TypeName="VirtualMindModel.UserInformation">
+              <MappingFragment StoreEntitySet="UserInformation">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="firstname" ColumnName="firstname" />
+                <ScalarProperty Name="lastname" ColumnName="lastname" />
+                <ScalarProperty Name="birthdate" ColumnName="birthdate" />
+                <ScalarProperty Name="age" ColumnName="age" />
+                <ScalarProperty Name="dni" ColumnName="dni" />
+                <ScalarProperty Name="ts" ColumnName="ts" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserTransaction">
+            <EntityTypeMapping TypeName="VirtualMindModel.UserTransaction">
+              <MappingFragment StoreEntitySet="UserTransaction">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="isoCurrency" ColumnName="isoCurrency" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="ts" ColumnName="ts" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

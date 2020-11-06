@@ -124,8 +124,6 @@
     <Compile Include="Factory\Abstract\CurrencyFactory.cs" />
     <Compile Include="Helpers\AutoMapper.cs" />
     <Compile Include="Interface\ICurrencyBiz.cs" />
-    <Compile Include="Interface\IDatosVolumetricosBiz.cs" />
-    <Compile Include="DatosVolumetricosBiz.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

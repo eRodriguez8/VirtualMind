@@ -4,11 +4,11 @@ namespace VirtualMind.TechnicalEvaluation.Biz
 {
     public class BaseBusiness
     {
-        protected IUOW_CDsEntities _uOWCdsDB { get; }
+        protected IUOW_VirtualMindDb _uOWDB { get; }
 
-        protected BaseBusiness(IUOW_CDsEntities uOWCdsDB)
+        protected BaseBusiness(IUOW_VirtualMindDb uOWDB)
         {
-            _uOWCdsDB = uOWCdsDB;
+            _uOWDB = uOWDB;
         }
     }
 }

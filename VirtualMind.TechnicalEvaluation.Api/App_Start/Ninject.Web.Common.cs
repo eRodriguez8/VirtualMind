@@ -68,7 +68,6 @@ namespace VirtualMind.TechnicalEvaluation.Api.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-            kernel.Bind<IDatosVolumetricosBiz>().To<DatosVolumetricosBiz>();
             kernel.Bind<ICurrencyBiz>().To<CurrencyBiz>();
             kernel.Bind<IUOW_CDsEntities>().To<UOW_CDsDB>().InRequestScope();
         }        

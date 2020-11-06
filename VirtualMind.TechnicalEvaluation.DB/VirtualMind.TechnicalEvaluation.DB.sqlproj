@@ -73,6 +73,9 @@
     <Folder Include="v1" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="v1\xxx.sql" />
+    <None Include="v1\model.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="v1\data.sql" />
   </ItemGroup>
 </Project>

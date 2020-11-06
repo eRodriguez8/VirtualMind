@@ -1,0 +1,1 @@
+﻿insert into UserInformation values ('Emanuel', 'Rodriguez', convert(datetime,'15-06-93',5), 27, '123456798', getdate())

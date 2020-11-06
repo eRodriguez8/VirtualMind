@@ -60,6 +60,8 @@
     <Compile Include="Domain\DatosVolumetricos.cs" />
     <Compile Include="Domain\ConvertionDetail.cs" />
     <Compile Include="Domain\Enums\Currency.cs" />
+    <Compile Include="Domain\UserTransac.cs" />
+    <Compile Include="Domain\UserInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
