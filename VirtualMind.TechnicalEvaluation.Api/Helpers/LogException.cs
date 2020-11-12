@@ -1,8 +1,8 @@
 ﻿using log4net;
+using System;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http.Filters;
-using System;
 using VirtualMind.TechnicalEvaluation.Biz.Exceptions;
 
 namespace VirtualMind.TechnicalEvaluation.Api.Helpers
@@ -32,8 +32,9 @@ namespace VirtualMind.TechnicalEvaluation.Api.Helpers
 
             if(actionExecutedContext.Exception is ConflictException)
             {
+                var exception = (ConflictException)actionExecutedContext.Exception;
                 actionExecutedContext.Response = actionExecutedContext.ActionContext.ControllerContext.Request
-                    .CreateResponse(HttpStatusCode.Conflict, new {});
+                    .CreateResponse(HttpStatusCode.Conflict, new { exception.Message });
                 return;
             }
 

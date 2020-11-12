@@ -1,14 +1,12 @@
 ﻿using VirtualMind.TechnicalEvaluation.Dal.Interface;
-using VirtualMind.TechnicalEvaluation.Dal;
 using System;
 using System.Data.Entity;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Runtime.Remoting.Contexts;
 
 namespace VirtualMind.TechnicalEvaluation.Test.Fakes
-{ 
+{
     public class FakeRepository<TEntity, TDataBase> : IGenericRepository<TEntity, TDataBase> where TEntity : class where TDataBase : DbContext
     {
             public FakeRepository(IList<TEntity> entity)

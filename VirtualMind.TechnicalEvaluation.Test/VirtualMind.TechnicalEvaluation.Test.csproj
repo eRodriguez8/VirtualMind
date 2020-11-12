@@ -79,10 +79,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Biz\DatosVolumetricosBizTest.cs" />
     <Compile Include="Fakes\FakeRepository.cs" />
-    <Compile Include="Fakes\FakeUOW_CDsEntities.cs" />
-    <Compile Include="Biz\ContenedoresBizTest.cs" />
+    <Compile Include="Fakes\FakeUOW_VirtualMindEntities.cs" />
+    <Compile Include="Biz\CurrencyBizTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

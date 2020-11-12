@@ -69,7 +69,7 @@ namespace VirtualMind.TechnicalEvaluation.Api.App_Start
         private static void RegisterServices(IKernel kernel)
         {
             kernel.Bind<ICurrencyBiz>().To<CurrencyBiz>();
-            kernel.Bind<IUOW_CDsEntities>().To<UOW_CDsDB>().InRequestScope();
+            kernel.Bind<IUOW_VirtualMindDb>().To<UOW_VirtualMindDb>().InRequestScope();
         }        
     }
 }

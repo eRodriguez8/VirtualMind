@@ -16,6 +16,5 @@ namespace VirtualMind.TechnicalEvaluation.Biz.Exceptions
         public NotFoundException(string message, Exception innerException) : base(message, innerException)
         {
         }
-
     }
 }

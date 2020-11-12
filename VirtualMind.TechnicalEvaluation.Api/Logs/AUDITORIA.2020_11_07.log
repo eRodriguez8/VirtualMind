@@ -1,0 +1,1390 @@
+2020-11-07 01:02:31,494|CENCOSUD\EB6220|ERROR|VirtualMind.TechnicalEvaluation.Api.Helpers.LogException|System.InvalidOperationException: No connection string named 'VirtualMindEntities' could be found in the application config file.
+   en System.Data.Entity.Internal.LazyInternalConnection.get_ConnectionHasModel()
+   en System.Data.Entity.Internal.LazyInternalContext.InitializeContext()
+   en System.Data.Entity.Internal.InternalContext.Initialize()
+   en System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   en System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   en System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   en System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   en System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)
+   en VirtualMind.TechnicalEvaluation.Dal.GenericRepository`2.Get(Expression`1 filter, Func`2 orderBy, String includeProperties) en C:\Develop\virtualMind\VirtualMind\VirtualMind.TechnicalEvaluation.Dal\GenericRepository.cs:línea 30
+   en VirtualMind.TechnicalEvaluation.Biz.CurrencyBiz.getAmountBought(Int32 id) en C:\Develop\virtualMind\VirtualMind\VirtualMind.TechnicalEvaluation.Biz\CurrencyBiz.cs:línea 89
+   en VirtualMind.TechnicalEvaluation.Biz.CurrencyBiz.IsAValidAmount(Double amountToBuy, Int32 iso, Int32 id) en C:\Develop\virtualMind\VirtualMind\VirtualMind.TechnicalEvaluation.Biz\CurrencyBiz.cs:línea 71
+   en VirtualMind.TechnicalEvaluation.Biz.CurrencyBiz.BuyCurrencies(Int32 idUser, String amount, Int32 iso) en C:\Develop\virtualMind\VirtualMind\VirtualMind.TechnicalEvaluation.Biz\CurrencyBiz.cs:línea 54
+   en VirtualMind.TechnicalEvaluation.Api.Controllers.BuyCurrenciesController.Buy(Int32 idUser, String amount, Int32 iso) en C:\Develop\virtualMind\VirtualMind\VirtualMind.TechnicalEvaluation.Api\Controllers\BuyCurrenciesController.cs:línea 27
+   en lambda_method(Closure , Object , Object[] )
+   en System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass6_2.<GetExecutor>b__2(Object instance, Object[] methodParameters)
+   en System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   en System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__5.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__5.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__6.MoveNext()
+2020-11-07 01:02:31,574|CENCOSUD\EB6220|ERROR|VirtualMind.TechnicalEvaluation.Api.Helpers.LogException|Parametro/s de entrada: URI: http://localhost/VirtualMind.TechnicalEvaluation.Api/api/v1/BuyCurrencies/2/1000/840BODY: 
+2020-11-07 16:08:37,740|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Failed to open connection at 7/11/2020 16:08:37 -03:00 with error: Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Shared Memory Provider, error: 40 - No se pudo abrir una conexión con SQL Server)
+
+2020-11-07 16:13:07,861|CENCOSUD\EB6220|ERROR|VirtualMind.TechnicalEvaluation.Api.Helpers.LogException|AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+DbQuery`1 -> List`1
+System.Data.Entity.Infrastructure.DbQuery`1[[VirtualMind.TechnicalEvaluation.Dal.UserTransaction, VirtualMind.TechnicalEvaluation.Dal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.List`1[[VirtualMind.TechnicalEvaluation.Entities.Domain.UserTransac, VirtualMind.TechnicalEvaluation.Entities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] ---> System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Shared Memory Provider, error: 40 - No se pudo abrir una conexión con SQL Server) ---> System.ComponentModel.Win32Exception: El sistema no puede encontrar el archivo especificado
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling, SqlAuthenticationProviderManager sqlAuthProviderManager)
+   en System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   en System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   en System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   en System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   en System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.Open()
+   en System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext](TTarget target, Action`2 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   en System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.Open(DbConnection connection, DbInterceptionContext interceptionContext)
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<>c__DisplayClass1.<Execute>b__0()
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   en System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   en System.Data.Entity.Core.Objects.ObjectContext.EnsureConnection(Boolean shouldMonitorTransactions)
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   en System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   en System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   en System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   en System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   en lambda_method(Closure , DbQuery`1 , List`1 , ResolutionContext )
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en lambda_method(Closure , DbQuery`1 , List`1 , ResolutionContext )
+   en lambda_method(Closure , Object , Object , ResolutionContext )
+   en AutoMapper.Mapper.AutoMapper.IMapper.Map[TDestination](Object source)
+   en VirtualMind.TechnicalEvaluation.Biz.Helpers.AutoMapper.ToDomain(IEnumerable`1 entity) en C:\Develop\virtualMind\VirtualMind\VirtualMind.TechnicalEvaluation.Biz\Helpers\AutoMapper.cs:línea 24
+   en VirtualMind.TechnicalEvaluation.Biz.CurrencyBiz.getAmountBought(Int32 id) en C:\Develop\virtualMind\VirtualMind\VirtualMind.TechnicalEvaluation.Biz\CurrencyBiz.cs:línea 89
+   en VirtualMind.TechnicalEvaluation.Biz.CurrencyBiz.IsAValidAmount(Double amountToBuy, Int32 iso, Int32 id) en C:\Develop\virtualMind\VirtualMind\VirtualMind.TechnicalEvaluation.Biz\CurrencyBiz.cs:línea 71
+   en VirtualMind.TechnicalEvaluation.Biz.CurrencyBiz.BuyCurrencies(Int32 idUser, String amount, Int32 iso) en C:\Develop\virtualMind\VirtualMind\VirtualMind.TechnicalEvaluation.Biz\CurrencyBiz.cs:línea 54
+   en VirtualMind.TechnicalEvaluation.Api.Controllers.BuyCurrenciesController.Buy(Int32 idUser, String amount, Int32 iso) en C:\Develop\virtualMind\VirtualMind\VirtualMind.TechnicalEvaluation.Api\Controllers\BuyCurrenciesController.cs:línea 27
+   en lambda_method(Closure , Object , Object[] )
+   en System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass6_2.<GetExecutor>b__2(Object instance, Object[] methodParameters)
+   en System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   en System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__5.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__5.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__6.MoveNext()
+2020-11-07 16:13:07,894|CENCOSUD\EB6220|ERROR|VirtualMind.TechnicalEvaluation.Api.Helpers.LogException|Parametro/s de entrada: URI: http://localhost/VirtualMind.TechnicalEvaluation.Api/api/v1/BuyCurrencies/2/1000/840BODY: 
+2020-11-07 16:17:12,669|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Opened connection at 7/11/2020 16:17:12 -03:00
+
+2020-11-07 16:17:13,959|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|SELECT 
+    [Extent1].[id] AS [id], 
+    [Extent1].[idUsuario] AS [idUsuario], 
+    [Extent1].[amount] AS [amount], 
+    [Extent1].[isoCurrency] AS [isoCurrency], 
+    [Extent1].[price] AS [price], 
+    [Extent1].[ts] AS [ts]
+    FROM [dbo].[UserTransaction] AS [Extent1]
+    WHERE ([Extent1].[idUsuario] = @p__linq__0) AND (((DATEPART (month, [Extent1].[ts])) = (DATEPART (month, SysDateTime()))) OR ((DATEPART (month, [Extent1].[ts]) IS NULL) AND (DATEPART (month, SysDateTime()) IS NULL)))
+2020-11-07 16:17:13,960|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:17:13,962|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+2020-11-07 16:17:13,963|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:17:13 -03:00
+
+2020-11-07 16:17:14,034|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 67 ms with result: SqlDataReader
+
+2020-11-07 16:17:14,034|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:17:14,042|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Closed connection at 7/11/2020 16:17:14 -03:00
+
+2020-11-07 16:17:43,094|CENCOSUD\EB6220|ERROR|VirtualMind.TechnicalEvaluation.Api.Helpers.LogException|System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en VirtualMind.TechnicalEvaluation.Biz.CurrencyBiz.getAmountBought(Int32 id) en C:\Develop\virtualMind\VirtualMind\VirtualMind.TechnicalEvaluation.Biz\CurrencyBiz.cs:línea 90
+   en VirtualMind.TechnicalEvaluation.Biz.CurrencyBiz.IsAValidAmount(Double amountToBuy, Int32 iso, Int32 id) en C:\Develop\virtualMind\VirtualMind\VirtualMind.TechnicalEvaluation.Biz\CurrencyBiz.cs:línea 71
+   en VirtualMind.TechnicalEvaluation.Biz.CurrencyBiz.BuyCurrencies(Int32 idUser, String amount, Int32 iso) en C:\Develop\virtualMind\VirtualMind\VirtualMind.TechnicalEvaluation.Biz\CurrencyBiz.cs:línea 54
+   en VirtualMind.TechnicalEvaluation.Api.Controllers.BuyCurrenciesController.Buy(Int32 idUser, String amount, Int32 iso) en C:\Develop\virtualMind\VirtualMind\VirtualMind.TechnicalEvaluation.Api\Controllers\BuyCurrenciesController.cs:línea 27
+   en lambda_method(Closure , Object , Object[] )
+   en System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass6_2.<GetExecutor>b__2(Object instance, Object[] methodParameters)
+   en System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   en System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__5.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__5.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__6.MoveNext()
+2020-11-07 16:17:43,105|CENCOSUD\EB6220|ERROR|VirtualMind.TechnicalEvaluation.Api.Helpers.LogException|Parametro/s de entrada: URI: http://localhost/VirtualMind.TechnicalEvaluation.Api/api/v1/BuyCurrencies/2/1000/840BODY: 
+2020-11-07 16:19:41,366|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Opened connection at 7/11/2020 16:19:41 -03:00
+
+2020-11-07 16:19:42,359|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|SELECT 
+    [Extent1].[id] AS [id], 
+    [Extent1].[idUsuario] AS [idUsuario], 
+    [Extent1].[amount] AS [amount], 
+    [Extent1].[isoCurrency] AS [isoCurrency], 
+    [Extent1].[price] AS [price], 
+    [Extent1].[ts] AS [ts]
+    FROM [dbo].[UserTransaction] AS [Extent1]
+    WHERE ([Extent1].[idUsuario] = @p__linq__0) AND (((DATEPART (month, [Extent1].[ts])) = (DATEPART (month, SysDateTime()))) OR ((DATEPART (month, [Extent1].[ts]) IS NULL) AND (DATEPART (month, SysDateTime()) IS NULL)))
+2020-11-07 16:19:42,359|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:19:42,362|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+2020-11-07 16:19:42,362|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:19:42 -03:00
+
+2020-11-07 16:19:42,380|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 14 ms with result: SqlDataReader
+
+2020-11-07 16:19:42,381|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:19:42,389|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Closed connection at 7/11/2020 16:19:42 -03:00
+
+2020-11-07 16:32:01,735|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Opened connection at 7/11/2020 16:32:01 -03:00
+
+2020-11-07 16:32:02,738|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|SELECT 
+    [Extent1].[id] AS [id], 
+    [Extent1].[idUsuario] AS [idUsuario], 
+    [Extent1].[amount] AS [amount], 
+    [Extent1].[isoCurrency] AS [isoCurrency], 
+    [Extent1].[price] AS [price], 
+    [Extent1].[ts] AS [ts]
+    FROM [dbo].[UserTransaction] AS [Extent1]
+    WHERE ([Extent1].[idUsuario] = @p__linq__0) AND (((DATEPART (month, [Extent1].[ts])) = (DATEPART (month, SysDateTime()))) OR ((DATEPART (month, [Extent1].[ts]) IS NULL) AND (DATEPART (month, SysDateTime()) IS NULL)))
+2020-11-07 16:32:02,738|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:32:02,740|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+2020-11-07 16:32:02,741|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:32:02 -03:00
+
+2020-11-07 16:32:02,762|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 17 ms with result: SqlDataReader
+
+2020-11-07 16:32:02,762|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:32:02,770|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Closed connection at 7/11/2020 16:32:02 -03:00
+
+2020-11-07 16:32:19,034|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Opened connection at 7/11/2020 16:32:19 -03:00
+
+2020-11-07 16:32:19,055|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|SELECT 
+    [Extent1].[id] AS [id], 
+    [Extent1].[firstname] AS [firstname], 
+    [Extent1].[lastname] AS [lastname], 
+    [Extent1].[birthdate] AS [birthdate], 
+    [Extent1].[age] AS [age], 
+    [Extent1].[dni] AS [dni], 
+    [Extent1].[ts] AS [ts]
+    FROM [dbo].[UserInformation] AS [Extent1]
+    WHERE [Extent1].[id] = @p__linq__0
+2020-11-07 16:32:19,055|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:32:19,056|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+2020-11-07 16:32:19,057|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:32:19 -03:00
+
+2020-11-07 16:32:19,076|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 18 ms with result: SqlDataReader
+
+2020-11-07 16:32:19,077|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:32:19,230|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|SELECT 
+    [Extent1].[id] AS [id], 
+    [Extent1].[idUsuario] AS [idUsuario], 
+    [Extent1].[amount] AS [amount], 
+    [Extent1].[isoCurrency] AS [isoCurrency], 
+    [Extent1].[price] AS [price], 
+    [Extent1].[ts] AS [ts]
+    FROM [dbo].[UserTransaction] AS [Extent1]
+    WHERE [Extent1].[idUsuario] = @EntityKeyValue1
+2020-11-07 16:32:19,230|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:32:19,231|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- EntityKeyValue1: '2' (Type = Int32, IsNullable = false)
+
+2020-11-07 16:32:19,231|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:32:19 -03:00
+
+2020-11-07 16:32:19,233|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 0 ms with result: SqlDataReader
+
+2020-11-07 16:32:19,234|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:32:19,245|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Closed connection at 7/11/2020 16:32:19 -03:00
+
+2020-11-07 16:35:05,982|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Opened connection at 7/11/2020 16:35:05 -03:00
+
+2020-11-07 16:35:06,950|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|SELECT 
+    [Extent1].[id] AS [id], 
+    [Extent1].[idUsuario] AS [idUsuario], 
+    [Extent1].[amount] AS [amount], 
+    [Extent1].[isoCurrency] AS [isoCurrency], 
+    [Extent1].[price] AS [price], 
+    [Extent1].[ts] AS [ts]
+    FROM [dbo].[UserTransaction] AS [Extent1]
+    WHERE ([Extent1].[idUsuario] = @p__linq__0) AND (((DATEPART (month, [Extent1].[ts])) = (DATEPART (month, SysDateTime()))) OR ((DATEPART (month, [Extent1].[ts]) IS NULL) AND (DATEPART (month, SysDateTime()) IS NULL)))
+2020-11-07 16:35:06,951|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:35:06,953|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+2020-11-07 16:35:06,953|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:35:06 -03:00
+
+2020-11-07 16:35:06,958|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 1 ms with result: SqlDataReader
+
+2020-11-07 16:35:06,958|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:35:06,965|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Closed connection at 7/11/2020 16:35:06 -03:00
+
+2020-11-07 16:35:19,605|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Opened connection at 7/11/2020 16:35:19 -03:00
+
+2020-11-07 16:35:19,625|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|SELECT 
+    [Extent1].[id] AS [id], 
+    [Extent1].[firstname] AS [firstname], 
+    [Extent1].[lastname] AS [lastname], 
+    [Extent1].[birthdate] AS [birthdate], 
+    [Extent1].[age] AS [age], 
+    [Extent1].[dni] AS [dni], 
+    [Extent1].[ts] AS [ts]
+    FROM [dbo].[UserInformation] AS [Extent1]
+    WHERE [Extent1].[id] = @p__linq__0
+2020-11-07 16:35:19,626|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:35:19,627|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+2020-11-07 16:35:19,627|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:35:19 -03:00
+
+2020-11-07 16:35:19,628|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 0 ms with result: SqlDataReader
+
+2020-11-07 16:35:19,629|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:35:19,728|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|SELECT 
+    [Extent1].[id] AS [id], 
+    [Extent1].[idUsuario] AS [idUsuario], 
+    [Extent1].[amount] AS [amount], 
+    [Extent1].[isoCurrency] AS [isoCurrency], 
+    [Extent1].[price] AS [price], 
+    [Extent1].[ts] AS [ts]
+    FROM [dbo].[UserTransaction] AS [Extent1]
+    WHERE [Extent1].[idUsuario] = @EntityKeyValue1
+2020-11-07 16:35:19,730|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:35:19,730|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- EntityKeyValue1: '2' (Type = Int32, IsNullable = false)
+
+2020-11-07 16:35:19,731|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:35:19 -03:00
+
+2020-11-07 16:35:19,732|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 0 ms with result: SqlDataReader
+
+2020-11-07 16:35:19,732|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:35:19,741|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Closed connection at 7/11/2020 16:35:19 -03:00
+
+2020-11-07 16:35:25,132|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Opened connection at 7/11/2020 16:35:25 -03:00
+
+2020-11-07 16:35:25,136|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Started transaction at 7/11/2020 16:35:25 -03:00
+
+2020-11-07 16:35:25,299|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|INSERT [dbo].[UserInformation]([firstname], [lastname], [birthdate], [age], [dni], [ts])
+VALUES (@0, @1, @2, @3, @4, @5)
+SELECT [id]
+FROM [dbo].[UserInformation]
+WHERE @@ROWCOUNT > 0 AND [id] = scope_identity()
+2020-11-07 16:35:25,300|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:35:25,300|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @0: 'Emanuel' (Type = String, Size = 30)
+
+2020-11-07 16:35:25,301|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @1: 'Rodriguez' (Type = String, Size = 30)
+
+2020-11-07 16:35:25,301|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @2: '15/6/1993 00:00:00' (Type = DateTime2)
+
+2020-11-07 16:35:25,302|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @3: '27' (Type = Int32)
+
+2020-11-07 16:35:25,303|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @4: '123456798' (Type = String, Size = 30)
+
+2020-11-07 16:35:25,303|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @5: '3/11/2020 22:57:44' (Type = DateTime2)
+
+2020-11-07 16:35:25,304|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:35:25 -03:00
+
+2020-11-07 16:35:25,319|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 26 ms with result: SqlDataReader
+
+2020-11-07 16:35:25,331|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:35:25,331|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|INSERT [dbo].[UserTransaction]([idUsuario], [amount], [isoCurrency], [price], [ts])
+VALUES (@0, @1, @2, @3, @4)
+SELECT [id]
+FROM [dbo].[UserTransaction]
+WHERE @@ROWCOUNT > 0 AND [id] = scope_identity()
+2020-11-07 16:35:25,331|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:35:25,331|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @0: '3' (Type = Int32)
+
+2020-11-07 16:35:25,331|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @1: '11,8694362017804' (Type = String, Size = 20)
+
+2020-11-07 16:35:25,336|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @2: '840' (Type = String, Size = 20)
+
+2020-11-07 16:35:25,337|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @3: '84,25' (Type = String, Size = 20)
+
+2020-11-07 16:35:25,337|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @4: '7/11/2020 16:35:24' (Type = DateTime2)
+
+2020-11-07 16:35:25,338|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:35:25 -03:00
+
+2020-11-07 16:35:25,348|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 9 ms with result: SqlDataReader
+
+2020-11-07 16:35:25,349|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:35:25,367|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Committed transaction at 7/11/2020 16:35:25 -03:00
+
+2020-11-07 16:35:25,369|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Closed connection at 7/11/2020 16:35:25 -03:00
+
+2020-11-07 16:36:03,410|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Opened connection at 7/11/2020 16:36:03 -03:00
+
+2020-11-07 16:36:03,412|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|SELECT 
+    [Extent1].[id] AS [id], 
+    [Extent1].[idUsuario] AS [idUsuario], 
+    [Extent1].[amount] AS [amount], 
+    [Extent1].[isoCurrency] AS [isoCurrency], 
+    [Extent1].[price] AS [price], 
+    [Extent1].[ts] AS [ts]
+    FROM [dbo].[UserTransaction] AS [Extent1]
+    WHERE ([Extent1].[idUsuario] = @p__linq__0) AND (((DATEPART (month, [Extent1].[ts])) = (DATEPART (month, SysDateTime()))) OR ((DATEPART (month, [Extent1].[ts]) IS NULL) AND (DATEPART (month, SysDateTime()) IS NULL)))
+2020-11-07 16:36:03,413|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:36:03,415|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+2020-11-07 16:36:03,415|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:36:03 -03:00
+
+2020-11-07 16:36:03,416|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 0 ms with result: SqlDataReader
+
+2020-11-07 16:36:03,417|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:36:03,418|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Closed connection at 7/11/2020 16:36:03 -03:00
+
+2020-11-07 16:36:14,798|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Opened connection at 7/11/2020 16:36:14 -03:00
+
+2020-11-07 16:36:14,800|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|SELECT 
+    [Extent1].[id] AS [id], 
+    [Extent1].[idUsuario] AS [idUsuario], 
+    [Extent1].[amount] AS [amount], 
+    [Extent1].[isoCurrency] AS [isoCurrency], 
+    [Extent1].[price] AS [price], 
+    [Extent1].[ts] AS [ts]
+    FROM [dbo].[UserTransaction] AS [Extent1]
+    WHERE ([Extent1].[idUsuario] = @p__linq__0) AND (((DATEPART (month, [Extent1].[ts])) = (DATEPART (month, SysDateTime()))) OR ((DATEPART (month, [Extent1].[ts]) IS NULL) AND (DATEPART (month, SysDateTime()) IS NULL)))
+2020-11-07 16:36:14,801|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:36:14,802|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+2020-11-07 16:36:14,802|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:36:14 -03:00
+
+2020-11-07 16:36:14,803|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 0 ms with result: SqlDataReader
+
+2020-11-07 16:36:14,804|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:36:14,804|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Closed connection at 7/11/2020 16:36:14 -03:00
+
+2020-11-07 16:36:32,463|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Opened connection at 7/11/2020 16:36:32 -03:00
+
+2020-11-07 16:36:32,464|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|SELECT 
+    [Extent1].[id] AS [id], 
+    [Extent1].[firstname] AS [firstname], 
+    [Extent1].[lastname] AS [lastname], 
+    [Extent1].[birthdate] AS [birthdate], 
+    [Extent1].[age] AS [age], 
+    [Extent1].[dni] AS [dni], 
+    [Extent1].[ts] AS [ts]
+    FROM [dbo].[UserInformation] AS [Extent1]
+    WHERE [Extent1].[id] = @p__linq__0
+2020-11-07 16:36:32,464|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:36:32,465|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+2020-11-07 16:36:32,466|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:36:32 -03:00
+
+2020-11-07 16:36:32,468|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 0 ms with result: SqlDataReader
+
+2020-11-07 16:36:32,468|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:36:32,470|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|SELECT 
+    [Extent1].[id] AS [id], 
+    [Extent1].[idUsuario] AS [idUsuario], 
+    [Extent1].[amount] AS [amount], 
+    [Extent1].[isoCurrency] AS [isoCurrency], 
+    [Extent1].[price] AS [price], 
+    [Extent1].[ts] AS [ts]
+    FROM [dbo].[UserTransaction] AS [Extent1]
+    WHERE [Extent1].[idUsuario] = @EntityKeyValue1
+2020-11-07 16:36:32,471|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:36:32,472|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- EntityKeyValue1: '2' (Type = Int32, IsNullable = false)
+
+2020-11-07 16:36:32,473|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:36:32 -03:00
+
+2020-11-07 16:36:32,474|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 0 ms with result: SqlDataReader
+
+2020-11-07 16:36:32,474|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:36:32,475|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Closed connection at 7/11/2020 16:36:32 -03:00
+
+2020-11-07 16:36:32,477|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Opened connection at 7/11/2020 16:36:32 -03:00
+
+2020-11-07 16:36:32,479|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Started transaction at 7/11/2020 16:36:32 -03:00
+
+2020-11-07 16:36:32,481|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|INSERT [dbo].[UserInformation]([firstname], [lastname], [birthdate], [age], [dni], [ts])
+VALUES (@0, @1, @2, @3, @4, @5)
+SELECT [id]
+FROM [dbo].[UserInformation]
+WHERE @@ROWCOUNT > 0 AND [id] = scope_identity()
+2020-11-07 16:36:32,481|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:36:32,482|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @0: 'Emanuel' (Type = String, Size = 30)
+
+2020-11-07 16:36:32,483|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @1: 'Rodriguez' (Type = String, Size = 30)
+
+2020-11-07 16:36:32,483|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @2: '15/6/1993 00:00:00' (Type = DateTime2)
+
+2020-11-07 16:36:32,486|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @3: '27' (Type = Int32)
+
+2020-11-07 16:36:32,486|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @4: '123456798' (Type = String, Size = 30)
+
+2020-11-07 16:36:32,487|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @5: '3/11/2020 22:57:44' (Type = DateTime2)
+
+2020-11-07 16:36:32,488|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:36:32 -03:00
+
+2020-11-07 16:36:32,490|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 0 ms with result: SqlDataReader
+
+2020-11-07 16:36:32,490|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:36:32,491|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|INSERT [dbo].[UserTransaction]([idUsuario], [amount], [isoCurrency], [price], [ts])
+VALUES (@0, @1, @2, @3, @4)
+SELECT [id]
+FROM [dbo].[UserTransaction]
+WHERE @@ROWCOUNT > 0 AND [id] = scope_identity()
+2020-11-07 16:36:32,493|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:36:32,493|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @0: '4' (Type = Int32)
+
+2020-11-07 16:36:32,495|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @1: '11,8694362017804' (Type = String, Size = 20)
+
+2020-11-07 16:36:32,496|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @2: '840' (Type = String, Size = 20)
+
+2020-11-07 16:36:32,496|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @3: '84,25' (Type = String, Size = 20)
+
+2020-11-07 16:36:32,497|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @4: '7/11/2020 16:36:32' (Type = DateTime2)
+
+2020-11-07 16:36:32,497|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:36:32 -03:00
+
+2020-11-07 16:36:32,499|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 0 ms with result: SqlDataReader
+
+2020-11-07 16:36:32,499|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:36:32,520|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Committed transaction at 7/11/2020 16:36:32 -03:00
+
+2020-11-07 16:36:32,535|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Closed connection at 7/11/2020 16:36:32 -03:00
+
+2020-11-07 16:37:24,528|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Opened connection at 7/11/2020 16:37:24 -03:00
+
+2020-11-07 16:37:25,549|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|SELECT 
+    [Extent1].[id] AS [id], 
+    [Extent1].[idUsuario] AS [idUsuario], 
+    [Extent1].[amount] AS [amount], 
+    [Extent1].[isoCurrency] AS [isoCurrency], 
+    [Extent1].[price] AS [price], 
+    [Extent1].[ts] AS [ts]
+    FROM [dbo].[UserTransaction] AS [Extent1]
+    WHERE [Extent1].[idUsuario] = @p__linq__0
+2020-11-07 16:37:25,550|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:37:25,551|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+2020-11-07 16:37:25,552|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:37:25 -03:00
+
+2020-11-07 16:37:25,572|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 17 ms with result: SqlDataReader
+
+2020-11-07 16:37:25,574|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:37:25,582|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Closed connection at 7/11/2020 16:37:25 -03:00
+
+2020-11-07 16:37:42,644|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Opened connection at 7/11/2020 16:37:42 -03:00
+
+2020-11-07 16:37:42,665|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|SELECT 
+    [Extent1].[id] AS [id], 
+    [Extent1].[firstname] AS [firstname], 
+    [Extent1].[lastname] AS [lastname], 
+    [Extent1].[birthdate] AS [birthdate], 
+    [Extent1].[age] AS [age], 
+    [Extent1].[dni] AS [dni], 
+    [Extent1].[ts] AS [ts]
+    FROM [dbo].[UserInformation] AS [Extent1]
+    WHERE [Extent1].[id] = @p__linq__0
+2020-11-07 16:37:42,666|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:37:42,667|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+2020-11-07 16:37:42,668|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:37:42 -03:00
+
+2020-11-07 16:37:42,669|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 0 ms with result: SqlDataReader
+
+2020-11-07 16:37:42,670|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:37:42,807|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|SELECT 
+    [Extent1].[id] AS [id], 
+    [Extent1].[idUsuario] AS [idUsuario], 
+    [Extent1].[amount] AS [amount], 
+    [Extent1].[isoCurrency] AS [isoCurrency], 
+    [Extent1].[price] AS [price], 
+    [Extent1].[ts] AS [ts]
+    FROM [dbo].[UserTransaction] AS [Extent1]
+    WHERE [Extent1].[idUsuario] = @EntityKeyValue1
+2020-11-07 16:37:42,808|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:37:42,808|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- EntityKeyValue1: '2' (Type = Int32, IsNullable = false)
+
+2020-11-07 16:37:42,809|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:37:42 -03:00
+
+2020-11-07 16:37:42,810|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 0 ms with result: SqlDataReader
+
+2020-11-07 16:37:42,811|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:37:42,823|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Closed connection at 7/11/2020 16:37:42 -03:00
+
+2020-11-07 16:37:42,965|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Opened connection at 7/11/2020 16:37:42 -03:00
+
+2020-11-07 16:37:42,971|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Started transaction at 7/11/2020 16:37:42 -03:00
+
+2020-11-07 16:37:43,107|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|INSERT [dbo].[UserInformation]([firstname], [lastname], [birthdate], [age], [dni], [ts])
+VALUES (@0, @1, @2, @3, @4, @5)
+SELECT [id]
+FROM [dbo].[UserInformation]
+WHERE @@ROWCOUNT > 0 AND [id] = scope_identity()
+2020-11-07 16:37:43,108|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:37:43,108|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @0: 'Emanuel' (Type = String, Size = 30)
+
+2020-11-07 16:37:43,109|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @1: 'Rodriguez' (Type = String, Size = 30)
+
+2020-11-07 16:37:43,109|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @2: '15/6/1993 00:00:00' (Type = DateTime2)
+
+2020-11-07 16:37:43,110|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @3: '27' (Type = Int32)
+
+2020-11-07 16:37:43,110|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @4: '123456798' (Type = String, Size = 30)
+
+2020-11-07 16:37:43,111|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @5: '3/11/2020 22:57:44' (Type = DateTime2)
+
+2020-11-07 16:37:43,111|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:37:43 -03:00
+
+2020-11-07 16:37:43,112|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 0 ms with result: SqlDataReader
+
+2020-11-07 16:37:43,113|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:37:43,115|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|INSERT [dbo].[UserTransaction]([idUsuario], [amount], [isoCurrency], [price], [ts])
+VALUES (@0, @1, @2, @3, @4)
+SELECT [id]
+FROM [dbo].[UserTransaction]
+WHERE @@ROWCOUNT > 0 AND [id] = scope_identity()
+2020-11-07 16:37:43,115|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:37:43,116|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @0: '5' (Type = Int32)
+
+2020-11-07 16:37:43,117|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @1: '11,8694362017804' (Type = String, Size = 20)
+
+2020-11-07 16:37:43,117|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @2: '840' (Type = String, Size = 20)
+
+2020-11-07 16:37:43,118|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @3: '84,25' (Type = String, Size = 20)
+
+2020-11-07 16:37:43,119|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @4: '7/11/2020 16:37:42' (Type = DateTime2)
+
+2020-11-07 16:37:43,119|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:37:43 -03:00
+
+2020-11-07 16:37:43,120|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 0 ms with result: SqlDataReader
+
+2020-11-07 16:37:43,120|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:37:43,138|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Committed transaction at 7/11/2020 16:37:43 -03:00
+
+2020-11-07 16:37:43,139|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Closed connection at 7/11/2020 16:37:43 -03:00
+
+2020-11-07 16:38:31,319|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Opened connection at 7/11/2020 16:38:31 -03:00
+
+2020-11-07 16:38:32,136|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|SELECT 
+    [Extent1].[id] AS [id], 
+    [Extent1].[idUsuario] AS [idUsuario], 
+    [Extent1].[amount] AS [amount], 
+    [Extent1].[isoCurrency] AS [isoCurrency], 
+    [Extent1].[price] AS [price], 
+    [Extent1].[ts] AS [ts]
+    FROM [dbo].[UserTransaction] AS [Extent1]
+2020-11-07 16:38:32,137|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:38:32,138|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:38:32 -03:00
+
+2020-11-07 16:38:32,142|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 1 ms with result: SqlDataReader
+
+2020-11-07 16:38:32,143|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:38:32,313|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|SELECT 
+    [Extent1].[id] AS [id], 
+    [Extent1].[firstname] AS [firstname], 
+    [Extent1].[lastname] AS [lastname], 
+    [Extent1].[birthdate] AS [birthdate], 
+    [Extent1].[age] AS [age], 
+    [Extent1].[dni] AS [dni], 
+    [Extent1].[ts] AS [ts]
+    FROM [dbo].[UserInformation] AS [Extent1]
+    WHERE [Extent1].[id] = @EntityKeyValue1
+2020-11-07 16:38:32,314|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:38:32,317|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- EntityKeyValue1: '3' (Type = Int32, IsNullable = false)
+
+2020-11-07 16:38:32,317|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:38:32 -03:00
+
+2020-11-07 16:38:32,319|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 0 ms with result: SqlDataReader
+
+2020-11-07 16:38:32,319|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:38:32,375|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|SELECT 
+    [Extent1].[id] AS [id], 
+    [Extent1].[idUsuario] AS [idUsuario], 
+    [Extent1].[amount] AS [amount], 
+    [Extent1].[isoCurrency] AS [isoCurrency], 
+    [Extent1].[price] AS [price], 
+    [Extent1].[ts] AS [ts]
+    FROM [dbo].[UserTransaction] AS [Extent1]
+    WHERE [Extent1].[idUsuario] = @EntityKeyValue1
+2020-11-07 16:38:32,376|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:38:32,376|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- EntityKeyValue1: '3' (Type = Int32, IsNullable = false)
+
+2020-11-07 16:38:32,376|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:38:32 -03:00
+
+2020-11-07 16:38:32,377|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 0 ms with result: SqlDataReader
+
+2020-11-07 16:38:32,379|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:38:32,381|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|SELECT 
+    [Extent1].[id] AS [id], 
+    [Extent1].[firstname] AS [firstname], 
+    [Extent1].[lastname] AS [lastname], 
+    [Extent1].[birthdate] AS [birthdate], 
+    [Extent1].[age] AS [age], 
+    [Extent1].[dni] AS [dni], 
+    [Extent1].[ts] AS [ts]
+    FROM [dbo].[UserInformation] AS [Extent1]
+    WHERE [Extent1].[id] = @EntityKeyValue1
+2020-11-07 16:38:32,382|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:38:32,382|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- EntityKeyValue1: '4' (Type = Int32, IsNullable = false)
+
+2020-11-07 16:38:32,383|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:38:32 -03:00
+
+2020-11-07 16:38:32,384|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 0 ms with result: SqlDataReader
+
+2020-11-07 16:38:32,384|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:38:32,395|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|SELECT 
+    [Extent1].[id] AS [id], 
+    [Extent1].[idUsuario] AS [idUsuario], 
+    [Extent1].[amount] AS [amount], 
+    [Extent1].[isoCurrency] AS [isoCurrency], 
+    [Extent1].[price] AS [price], 
+    [Extent1].[ts] AS [ts]
+    FROM [dbo].[UserTransaction] AS [Extent1]
+    WHERE [Extent1].[idUsuario] = @EntityKeyValue1
+2020-11-07 16:38:32,396|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:38:32,396|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- EntityKeyValue1: '4' (Type = Int32, IsNullable = false)
+
+2020-11-07 16:38:32,397|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:38:32 -03:00
+
+2020-11-07 16:38:32,398|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 0 ms with result: SqlDataReader
+
+2020-11-07 16:38:32,398|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:38:32,399|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|SELECT 
+    [Extent1].[id] AS [id], 
+    [Extent1].[firstname] AS [firstname], 
+    [Extent1].[lastname] AS [lastname], 
+    [Extent1].[birthdate] AS [birthdate], 
+    [Extent1].[age] AS [age], 
+    [Extent1].[dni] AS [dni], 
+    [Extent1].[ts] AS [ts]
+    FROM [dbo].[UserInformation] AS [Extent1]
+    WHERE [Extent1].[id] = @EntityKeyValue1
+2020-11-07 16:38:32,400|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:38:32,400|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- EntityKeyValue1: '5' (Type = Int32, IsNullable = false)
+
+2020-11-07 16:38:32,401|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:38:32 -03:00
+
+2020-11-07 16:38:32,402|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 0 ms with result: SqlDataReader
+
+2020-11-07 16:38:32,402|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:38:32,403|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|SELECT 
+    [Extent1].[id] AS [id], 
+    [Extent1].[idUsuario] AS [idUsuario], 
+    [Extent1].[amount] AS [amount], 
+    [Extent1].[isoCurrency] AS [isoCurrency], 
+    [Extent1].[price] AS [price], 
+    [Extent1].[ts] AS [ts]
+    FROM [dbo].[UserTransaction] AS [Extent1]
+    WHERE [Extent1].[idUsuario] = @EntityKeyValue1
+2020-11-07 16:38:32,403|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:38:32,404|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- EntityKeyValue1: '5' (Type = Int32, IsNullable = false)
+
+2020-11-07 16:38:32,404|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:38:32 -03:00
+
+2020-11-07 16:38:32,405|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 0 ms with result: SqlDataReader
+
+2020-11-07 16:38:32,406|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:38:32,408|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Closed connection at 7/11/2020 16:38:32 -03:00
+
+2020-11-07 16:39:13,437|CENCOSUD\EB6220|ERROR|VirtualMind.TechnicalEvaluation.Api.Helpers.LogException|VirtualMind.TechnicalEvaluation.Biz.Exceptions.AmountInvalidException: Monto no permitido
+   en VirtualMind.TechnicalEvaluation.Biz.CurrencyBiz.BuyCurrencies(Int32 idUser, String amount, Int32 iso) en C:\Develop\virtualMind\VirtualMind\VirtualMind.TechnicalEvaluation.Biz\CurrencyBiz.cs:línea 76
+   en VirtualMind.TechnicalEvaluation.Api.Controllers.BuyCurrenciesController.Buy(Int32 idUser, String amount, Int32 iso) en C:\Develop\virtualMind\VirtualMind\VirtualMind.TechnicalEvaluation.Api\Controllers\BuyCurrenciesController.cs:línea 26
+   en lambda_method(Closure , Object , Object[] )
+   en System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass6_2.<GetExecutor>b__2(Object instance, Object[] methodParameters)
+   en System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   en System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__5.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__5.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__6.MoveNext()
+2020-11-07 16:39:13,447|CENCOSUD\EB6220|ERROR|VirtualMind.TechnicalEvaluation.Api.Helpers.LogException|Parametro/s de entrada: URI: http://localhost/VirtualMind.TechnicalEvaluation.Api/api/v1/BuyCurrencies/2/1000/840BODY: 
+2020-11-07 16:47:45,353|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Opened connection at 7/11/2020 16:47:45 -03:00
+
+2020-11-07 16:47:46,328|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|SELECT 
+    [Extent1].[id] AS [id], 
+    [Extent1].[idUsuario] AS [idUsuario], 
+    [Extent1].[amount] AS [amount], 
+    [Extent1].[isoCurrency] AS [isoCurrency], 
+    [Extent1].[price] AS [price], 
+    [Extent1].[ts] AS [ts]
+    FROM [dbo].[UserTransaction] AS [Extent1]
+    WHERE [Extent1].[idUsuario] = @p__linq__0
+2020-11-07 16:47:46,329|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:47:46,331|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+2020-11-07 16:47:46,332|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:47:46 -03:00
+
+2020-11-07 16:47:46,337|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 1 ms with result: SqlDataReader
+
+2020-11-07 16:47:46,338|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:47:46,345|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Closed connection at 7/11/2020 16:47:46 -03:00
+
+2020-11-07 16:48:08,580|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Opened connection at 7/11/2020 16:48:08 -03:00
+
+2020-11-07 16:48:08,598|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|SELECT 
+    [Extent1].[id] AS [id], 
+    [Extent1].[firstname] AS [firstname], 
+    [Extent1].[lastname] AS [lastname], 
+    [Extent1].[birthdate] AS [birthdate], 
+    [Extent1].[age] AS [age], 
+    [Extent1].[dni] AS [dni], 
+    [Extent1].[ts] AS [ts]
+    FROM [dbo].[UserInformation] AS [Extent1]
+    WHERE [Extent1].[id] = @p__linq__0
+2020-11-07 16:48:08,599|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:48:08,603|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- p__linq__0: '2' (Type = Int32, IsNullable = false)
+
+2020-11-07 16:48:08,604|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:48:08 -03:00
+
+2020-11-07 16:48:08,605|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 1 ms with result: SqlDataReader
+
+2020-11-07 16:48:08,606|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:48:08,607|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Closed connection at 7/11/2020 16:48:08 -03:00
+
+2020-11-07 16:48:29,069|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Opened connection at 7/11/2020 16:48:29 -03:00
+
+2020-11-07 16:48:29,073|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Started transaction at 7/11/2020 16:48:29 -03:00
+
+2020-11-07 16:48:29,182|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|INSERT [dbo].[UserTransaction]([idUsuario], [amount], [isoCurrency], [price], [ts])
+VALUES (@0, @1, @2, @3, @4)
+SELECT [id]
+FROM [dbo].[UserTransaction]
+WHERE @@ROWCOUNT > 0 AND [id] = scope_identity()
+2020-11-07 16:48:29,183|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:48:29,183|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @0: '2' (Type = Int32)
+
+2020-11-07 16:48:29,184|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @1: '11,8694362017804' (Type = String, Size = 20)
+
+2020-11-07 16:48:29,184|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @2: '840' (Type = String, Size = 20)
+
+2020-11-07 16:48:29,185|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @3: '84,25' (Type = String, Size = 20)
+
+2020-11-07 16:48:29,185|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @4: '7/11/2020 16:48:23' (Type = DateTime2)
+
+2020-11-07 16:48:29,186|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:48:29 -03:00
+
+2020-11-07 16:48:29,260|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Failed in 73 ms with error: The INSERT statement conflicted with the FOREIGN KEY constraint "FK__UserTrans__idUsu__25869641". The conflict occurred in database "VirtualMind", table "dbo.UserInformation", column 'id'.
+The statement has been terminated.
+
+2020-11-07 16:48:29,261|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:48:29,266|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Closed connection at 7/11/2020 16:48:29 -03:00
+
+2020-11-07 16:48:33,563|CENCOSUD\EB6220|ERROR|VirtualMind.TechnicalEvaluation.Api.Helpers.LogException|System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: The INSERT statement conflicted with the FOREIGN KEY constraint "FK__UserTrans__idUsu__25869641". The conflict occurred in database "VirtualMind", table "dbo.UserInformation", column 'id'.
+The statement has been terminated.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   en System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   en System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.Execute(Dictionary`2 identifierValues, List`1 generatedValues)
+   en System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   en System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   en System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   en System.Data.Entity.Internal.InternalContext.SaveChanges()
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Data.Entity.Internal.InternalContext.SaveChanges()
+   en VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb.Save() en C:\Develop\virtualMind\VirtualMind\VirtualMind.TechnicalEvaluation.Dal\UOW_VirtualMindDb.cs:línea 51
+   en VirtualMind.TechnicalEvaluation.Biz.CurrencyBiz.BuyCurrencies(Int32 idUser, String amount, Int32 iso) en C:\Develop\virtualMind\VirtualMind\VirtualMind.TechnicalEvaluation.Biz\CurrencyBiz.cs:línea 68
+   en VirtualMind.TechnicalEvaluation.Api.Controllers.BuyCurrenciesController.Buy(Int32 idUser, String amount, Int32 iso) en C:\Develop\virtualMind\VirtualMind\VirtualMind.TechnicalEvaluation.Api\Controllers\BuyCurrenciesController.cs:línea 26
+   en lambda_method(Closure , Object , Object[] )
+   en System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass6_2.<GetExecutor>b__2(Object instance, Object[] methodParameters)
+   en System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   en System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__5.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__5.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__6.MoveNext()
+2020-11-07 16:48:33,579|CENCOSUD\EB6220|ERROR|VirtualMind.TechnicalEvaluation.Api.Helpers.LogException|Parametro/s de entrada: URI: http://localhost/VirtualMind.TechnicalEvaluation.Api/api/v1/BuyCurrencies/2/1000/840BODY: 
+2020-11-07 16:49:08,794|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Opened connection at 7/11/2020 16:49:08 -03:00
+
+2020-11-07 16:49:08,795|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|SELECT 
+    [Extent1].[id] AS [id], 
+    [Extent1].[idUsuario] AS [idUsuario], 
+    [Extent1].[amount] AS [amount], 
+    [Extent1].[isoCurrency] AS [isoCurrency], 
+    [Extent1].[price] AS [price], 
+    [Extent1].[ts] AS [ts]
+    FROM [dbo].[UserTransaction] AS [Extent1]
+    WHERE [Extent1].[idUsuario] = @p__linq__0
+2020-11-07 16:49:08,796|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:49:08,797|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- p__linq__0: '1' (Type = Int32, IsNullable = false)
+
+2020-11-07 16:49:08,798|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:49:08 -03:00
+
+2020-11-07 16:49:08,799|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 0 ms with result: SqlDataReader
+
+2020-11-07 16:49:08,799|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:49:08,800|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Closed connection at 7/11/2020 16:49:08 -03:00
+
+2020-11-07 16:49:22,833|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Opened connection at 7/11/2020 16:49:22 -03:00
+
+2020-11-07 16:49:22,834|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|SELECT 
+    [Extent1].[id] AS [id], 
+    [Extent1].[firstname] AS [firstname], 
+    [Extent1].[lastname] AS [lastname], 
+    [Extent1].[birthdate] AS [birthdate], 
+    [Extent1].[age] AS [age], 
+    [Extent1].[dni] AS [dni], 
+    [Extent1].[ts] AS [ts]
+    FROM [dbo].[UserInformation] AS [Extent1]
+    WHERE [Extent1].[id] = @p__linq__0
+2020-11-07 16:49:22,834|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:49:22,835|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- p__linq__0: '1' (Type = Int32, IsNullable = false)
+
+2020-11-07 16:49:22,835|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:49:22 -03:00
+
+2020-11-07 16:49:22,836|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 0 ms with result: SqlDataReader
+
+2020-11-07 16:49:22,837|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:49:22,897|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|SELECT 
+    [Extent1].[id] AS [id], 
+    [Extent1].[idUsuario] AS [idUsuario], 
+    [Extent1].[amount] AS [amount], 
+    [Extent1].[isoCurrency] AS [isoCurrency], 
+    [Extent1].[price] AS [price], 
+    [Extent1].[ts] AS [ts]
+    FROM [dbo].[UserTransaction] AS [Extent1]
+    WHERE [Extent1].[idUsuario] = @EntityKeyValue1
+2020-11-07 16:49:22,897|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:49:22,898|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- EntityKeyValue1: '1' (Type = Int32, IsNullable = false)
+
+2020-11-07 16:49:22,899|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:49:22 -03:00
+
+2020-11-07 16:49:22,900|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 0 ms with result: SqlDataReader
+
+2020-11-07 16:49:22,901|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:49:22,906|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Closed connection at 7/11/2020 16:49:22 -03:00
+
+2020-11-07 16:49:43,219|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Opened connection at 7/11/2020 16:49:43 -03:00
+
+2020-11-07 16:49:43,220|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Started transaction at 7/11/2020 16:49:43 -03:00
+
+2020-11-07 16:49:43,225|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|INSERT [dbo].[UserTransaction]([idUsuario], [amount], [isoCurrency], [price], [ts])
+VALUES (@0, @1, @2, @3, @4)
+SELECT [id]
+FROM [dbo].[UserTransaction]
+WHERE @@ROWCOUNT > 0 AND [id] = scope_identity()
+2020-11-07 16:49:43,226|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:49:43,227|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @0: '1' (Type = Int32)
+
+2020-11-07 16:49:43,228|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @1: '11,8694362017804' (Type = String, Size = 20)
+
+2020-11-07 16:49:43,228|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @2: '840' (Type = String, Size = 20)
+
+2020-11-07 16:49:43,229|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @3: '84,25' (Type = String, Size = 20)
+
+2020-11-07 16:49:43,229|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @4: '7/11/2020 16:49:42' (Type = DateTime2)
+
+2020-11-07 16:49:43,230|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:49:43 -03:00
+
+2020-11-07 16:49:43,231|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 0 ms with result: SqlDataReader
+
+2020-11-07 16:49:43,231|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:49:43,251|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Committed transaction at 7/11/2020 16:49:43 -03:00
+
+2020-11-07 16:49:43,252|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Closed connection at 7/11/2020 16:49:43 -03:00
+
+2020-11-07 16:50:13,437|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Opened connection at 7/11/2020 16:50:13 -03:00
+
+2020-11-07 16:50:13,437|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|SELECT 
+    [Extent1].[id] AS [id], 
+    [Extent1].[idUsuario] AS [idUsuario], 
+    [Extent1].[amount] AS [amount], 
+    [Extent1].[isoCurrency] AS [isoCurrency], 
+    [Extent1].[price] AS [price], 
+    [Extent1].[ts] AS [ts]
+    FROM [dbo].[UserTransaction] AS [Extent1]
+    WHERE [Extent1].[idUsuario] = @p__linq__0
+2020-11-07 16:50:13,438|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:50:13,438|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- p__linq__0: '1' (Type = Int32, IsNullable = false)
+
+2020-11-07 16:50:13,439|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:50:13 -03:00
+
+2020-11-07 16:50:13,440|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 0 ms with result: SqlDataReader
+
+2020-11-07 16:50:13,440|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:50:13,444|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|SELECT 
+    [Extent1].[id] AS [id], 
+    [Extent1].[firstname] AS [firstname], 
+    [Extent1].[lastname] AS [lastname], 
+    [Extent1].[birthdate] AS [birthdate], 
+    [Extent1].[age] AS [age], 
+    [Extent1].[dni] AS [dni], 
+    [Extent1].[ts] AS [ts]
+    FROM [dbo].[UserInformation] AS [Extent1]
+    WHERE [Extent1].[id] = @EntityKeyValue1
+2020-11-07 16:50:13,445|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:50:13,446|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- EntityKeyValue1: '1' (Type = Int32, IsNullable = false)
+
+2020-11-07 16:50:13,446|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:50:13 -03:00
+
+2020-11-07 16:50:13,448|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 1 ms with result: SqlDataReader
+
+2020-11-07 16:50:13,448|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:50:13,469|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|SELECT 
+    [Extent1].[id] AS [id], 
+    [Extent1].[idUsuario] AS [idUsuario], 
+    [Extent1].[amount] AS [amount], 
+    [Extent1].[isoCurrency] AS [isoCurrency], 
+    [Extent1].[price] AS [price], 
+    [Extent1].[ts] AS [ts]
+    FROM [dbo].[UserTransaction] AS [Extent1]
+    WHERE [Extent1].[idUsuario] = @EntityKeyValue1
+2020-11-07 16:50:13,470|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:50:13,470|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- EntityKeyValue1: '1' (Type = Int32, IsNullable = false)
+
+2020-11-07 16:50:13,471|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:50:13 -03:00
+
+2020-11-07 16:50:13,472|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 0 ms with result: SqlDataReader
+
+2020-11-07 16:50:13,472|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:50:13,473|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Closed connection at 7/11/2020 16:50:13 -03:00
+
+2020-11-07 16:50:57,927|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Opened connection at 7/11/2020 16:50:57 -03:00
+
+2020-11-07 16:50:57,928|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|SELECT 
+    [Extent1].[id] AS [id], 
+    [Extent1].[idUsuario] AS [idUsuario], 
+    [Extent1].[amount] AS [amount], 
+    [Extent1].[isoCurrency] AS [isoCurrency], 
+    [Extent1].[price] AS [price], 
+    [Extent1].[ts] AS [ts]
+    FROM [dbo].[UserTransaction] AS [Extent1]
+    WHERE [Extent1].[idUsuario] = @p__linq__0
+2020-11-07 16:50:57,929|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:50:57,930|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- p__linq__0: '1' (Type = Int32, IsNullable = false)
+
+2020-11-07 16:50:57,930|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:50:57 -03:00
+
+2020-11-07 16:50:57,931|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 0 ms with result: SqlDataReader
+
+2020-11-07 16:50:57,932|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:50:57,933|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Closed connection at 7/11/2020 16:50:57 -03:00
+
+2020-11-07 16:51:55,775|CENCOSUD\EB6220|ERROR|VirtualMind.TechnicalEvaluation.Api.Helpers.LogException|VirtualMind.TechnicalEvaluation.Biz.Exceptions.AmountInvalidException: Monto no permitido
+   en VirtualMind.TechnicalEvaluation.Biz.CurrencyBiz.BuyCurrencies(Int32 idUser, String amount, Int32 iso) en C:\Develop\virtualMind\VirtualMind\VirtualMind.TechnicalEvaluation.Biz\CurrencyBiz.cs:línea 75
+   en VirtualMind.TechnicalEvaluation.Api.Controllers.BuyCurrenciesController.Buy(Int32 idUser, String amount, Int32 iso) en C:\Develop\virtualMind\VirtualMind\VirtualMind.TechnicalEvaluation.Api\Controllers\BuyCurrenciesController.cs:línea 26
+   en lambda_method(Closure , Object , Object[] )
+   en System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass6_2.<GetExecutor>b__2(Object instance, Object[] methodParameters)
+   en System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__1.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   en System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__5.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__5.MoveNext()
+--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---
+   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__6.MoveNext()
+2020-11-07 16:51:55,778|CENCOSUD\EB6220|ERROR|VirtualMind.TechnicalEvaluation.Api.Helpers.LogException|Parametro/s de entrada: URI: http://localhost/VirtualMind.TechnicalEvaluation.Api/api/v1/BuyCurrencies/1/1000/840BODY: 
+2020-11-07 16:52:39,610|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Opened connection at 7/11/2020 16:52:39 -03:00
+
+2020-11-07 16:52:40,537|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|SELECT 
+    [Extent1].[id] AS [id], 
+    [Extent1].[idUsuario] AS [idUsuario], 
+    [Extent1].[amount] AS [amount], 
+    [Extent1].[isoCurrency] AS [isoCurrency], 
+    [Extent1].[price] AS [price], 
+    [Extent1].[ts] AS [ts]
+    FROM [dbo].[UserTransaction] AS [Extent1]
+    WHERE [Extent1].[idUsuario] = @p__linq__0
+2020-11-07 16:52:40,538|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:52:40,541|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- p__linq__0: '1' (Type = Int32, IsNullable = false)
+
+2020-11-07 16:52:40,541|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:52:40 -03:00
+
+2020-11-07 16:52:40,547|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 1 ms with result: SqlDataReader
+
+2020-11-07 16:52:40,548|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:52:40,709|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|SELECT 
+    [Extent1].[id] AS [id], 
+    [Extent1].[firstname] AS [firstname], 
+    [Extent1].[lastname] AS [lastname], 
+    [Extent1].[birthdate] AS [birthdate], 
+    [Extent1].[age] AS [age], 
+    [Extent1].[dni] AS [dni], 
+    [Extent1].[ts] AS [ts]
+    FROM [dbo].[UserInformation] AS [Extent1]
+    WHERE [Extent1].[id] = @EntityKeyValue1
+2020-11-07 16:52:40,710|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:52:40,710|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- EntityKeyValue1: '1' (Type = Int32, IsNullable = false)
+
+2020-11-07 16:52:40,711|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:52:40 -03:00
+
+2020-11-07 16:52:40,712|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 0 ms with result: SqlDataReader
+
+2020-11-07 16:52:40,712|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:52:40,777|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|SELECT 
+    [Extent1].[id] AS [id], 
+    [Extent1].[idUsuario] AS [idUsuario], 
+    [Extent1].[amount] AS [amount], 
+    [Extent1].[isoCurrency] AS [isoCurrency], 
+    [Extent1].[price] AS [price], 
+    [Extent1].[ts] AS [ts]
+    FROM [dbo].[UserTransaction] AS [Extent1]
+    WHERE [Extent1].[idUsuario] = @EntityKeyValue1
+2020-11-07 16:52:40,778|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:52:40,779|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- EntityKeyValue1: '1' (Type = Int32, IsNullable = false)
+
+2020-11-07 16:52:40,780|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:52:40 -03:00
+
+2020-11-07 16:52:40,782|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 0 ms with result: SqlDataReader
+
+2020-11-07 16:52:40,782|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:52:40,786|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Closed connection at 7/11/2020 16:52:40 -03:00
+
+2020-11-07 16:52:40,824|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Opened connection at 7/11/2020 16:52:40 -03:00
+
+2020-11-07 16:52:40,826|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|SELECT 
+    [Extent1].[id] AS [id], 
+    [Extent1].[firstname] AS [firstname], 
+    [Extent1].[lastname] AS [lastname], 
+    [Extent1].[birthdate] AS [birthdate], 
+    [Extent1].[age] AS [age], 
+    [Extent1].[dni] AS [dni], 
+    [Extent1].[ts] AS [ts]
+    FROM [dbo].[UserInformation] AS [Extent1]
+    WHERE [Extent1].[id] = @p__linq__0
+2020-11-07 16:52:40,827|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:52:40,828|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- p__linq__0: '1' (Type = Int32, IsNullable = false)
+
+2020-11-07 16:52:40,829|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:52:40 -03:00
+
+2020-11-07 16:52:40,831|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 1 ms with result: SqlDataReader
+
+2020-11-07 16:52:40,832|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:52:40,833|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Closed connection at 7/11/2020 16:52:40 -03:00
+
+2020-11-07 16:52:40,935|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Opened connection at 7/11/2020 16:52:40 -03:00
+
+2020-11-07 16:52:40,939|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Started transaction at 7/11/2020 16:52:40 -03:00
+
+2020-11-07 16:52:41,045|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|INSERT [dbo].[UserTransaction]([idUsuario], [amount], [isoCurrency], [price], [ts])
+VALUES (@0, @1, @2, @3, @4)
+SELECT [id]
+FROM [dbo].[UserTransaction]
+WHERE @@ROWCOUNT > 0 AND [id] = scope_identity()
+2020-11-07 16:52:41,046|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:52:41,046|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @0: '1' (Type = Int32)
+
+2020-11-07 16:52:41,048|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @1: '11,8694362017804' (Type = String, Size = 20)
+
+2020-11-07 16:52:41,048|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @2: '840' (Type = String, Size = 20)
+
+2020-11-07 16:52:41,048|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @3: '84,25' (Type = String, Size = 20)
+
+2020-11-07 16:52:41,049|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @4: '7/11/2020 16:52:40' (Type = DateTime2)
+
+2020-11-07 16:52:41,049|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:52:41 -03:00
+
+2020-11-07 16:52:41,050|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 0 ms with result: SqlDataReader
+
+2020-11-07 16:52:41,051|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:52:41,066|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Committed transaction at 7/11/2020 16:52:41 -03:00
+
+2020-11-07 16:52:41,067|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Closed connection at 7/11/2020 16:52:41 -03:00
+
+2020-11-07 16:52:59,293|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Opened connection at 7/11/2020 16:52:59 -03:00
+
+2020-11-07 16:52:59,295|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|SELECT 
+    [Extent1].[id] AS [id], 
+    [Extent1].[idUsuario] AS [idUsuario], 
+    [Extent1].[amount] AS [amount], 
+    [Extent1].[isoCurrency] AS [isoCurrency], 
+    [Extent1].[price] AS [price], 
+    [Extent1].[ts] AS [ts]
+    FROM [dbo].[UserTransaction] AS [Extent1]
+    WHERE [Extent1].[idUsuario] = @p__linq__0
+2020-11-07 16:52:59,295|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:52:59,296|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- p__linq__0: '1' (Type = Int32, IsNullable = false)
+
+2020-11-07 16:52:59,297|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:52:59 -03:00
+
+2020-11-07 16:52:59,297|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 0 ms with result: SqlDataReader
+
+2020-11-07 16:52:59,298|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:52:59,299|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|SELECT 
+    [Extent1].[id] AS [id], 
+    [Extent1].[firstname] AS [firstname], 
+    [Extent1].[lastname] AS [lastname], 
+    [Extent1].[birthdate] AS [birthdate], 
+    [Extent1].[age] AS [age], 
+    [Extent1].[dni] AS [dni], 
+    [Extent1].[ts] AS [ts]
+    FROM [dbo].[UserInformation] AS [Extent1]
+    WHERE [Extent1].[id] = @EntityKeyValue1
+2020-11-07 16:52:59,299|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:52:59,300|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- EntityKeyValue1: '1' (Type = Int32, IsNullable = false)
+
+2020-11-07 16:52:59,300|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:52:59 -03:00
+
+2020-11-07 16:52:59,301|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 0 ms with result: SqlDataReader
+
+2020-11-07 16:52:59,302|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:52:59,304|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|SELECT 
+    [Extent1].[id] AS [id], 
+    [Extent1].[idUsuario] AS [idUsuario], 
+    [Extent1].[amount] AS [amount], 
+    [Extent1].[isoCurrency] AS [isoCurrency], 
+    [Extent1].[price] AS [price], 
+    [Extent1].[ts] AS [ts]
+    FROM [dbo].[UserTransaction] AS [Extent1]
+    WHERE [Extent1].[idUsuario] = @EntityKeyValue1
+2020-11-07 16:52:59,305|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:52:59,305|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- EntityKeyValue1: '1' (Type = Int32, IsNullable = false)
+
+2020-11-07 16:52:59,305|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:52:59 -03:00
+
+2020-11-07 16:52:59,306|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 0 ms with result: SqlDataReader
+
+2020-11-07 16:52:59,307|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:52:59,308|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Closed connection at 7/11/2020 16:52:59 -03:00
+
+2020-11-07 16:53:45,064|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Opened connection at 7/11/2020 16:53:45 -03:00
+
+2020-11-07 16:53:45,065|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|SELECT 
+    [Extent1].[id] AS [id], 
+    [Extent1].[firstname] AS [firstname], 
+    [Extent1].[lastname] AS [lastname], 
+    [Extent1].[birthdate] AS [birthdate], 
+    [Extent1].[age] AS [age], 
+    [Extent1].[dni] AS [dni], 
+    [Extent1].[ts] AS [ts]
+    FROM [dbo].[UserInformation] AS [Extent1]
+    WHERE [Extent1].[id] = @p__linq__0
+2020-11-07 16:53:45,066|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:53:45,067|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- p__linq__0: '1' (Type = Int32, IsNullable = false)
+
+2020-11-07 16:53:45,068|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:53:45 -03:00
+
+2020-11-07 16:53:45,069|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 0 ms with result: SqlDataReader
+
+2020-11-07 16:53:45,070|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:53:45,070|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Closed connection at 7/11/2020 16:53:45 -03:00
+
+2020-11-07 16:53:45,072|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Opened connection at 7/11/2020 16:53:45 -03:00
+
+2020-11-07 16:53:45,074|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Started transaction at 7/11/2020 16:53:45 -03:00
+
+2020-11-07 16:53:45,075|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|INSERT [dbo].[UserTransaction]([idUsuario], [amount], [isoCurrency], [price], [ts])
+VALUES (@0, @1, @2, @3, @4)
+SELECT [id]
+FROM [dbo].[UserTransaction]
+WHERE @@ROWCOUNT > 0 AND [id] = scope_identity()
+2020-11-07 16:53:45,076|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:53:45,078|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @0: '1' (Type = Int32)
+
+2020-11-07 16:53:45,078|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @1: '11,8694362017804' (Type = String, Size = 20)
+
+2020-11-07 16:53:45,078|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @2: '840' (Type = String, Size = 20)
+
+2020-11-07 16:53:45,079|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @3: '84,25' (Type = String, Size = 20)
+
+2020-11-07 16:53:45,079|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- @4: '7/11/2020 16:53:45' (Type = DateTime2)
+
+2020-11-07 16:53:45,080|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Executing at 7/11/2020 16:53:45 -03:00
+
+2020-11-07 16:53:45,081|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|-- Completed in 0 ms with result: SqlDataReader
+
+2020-11-07 16:53:45,082|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|
+
+2020-11-07 16:53:45,087|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Committed transaction at 7/11/2020 16:53:45 -03:00
+
+2020-11-07 16:53:45,088|CENCOSUD\EB6220|DEBUG|VirtualMind.TechnicalEvaluation.Dal.UnitOfWorks.UOW_VirtualMindDb|Closed connection at 7/11/2020 16:53:45 -03:00
+

@@ -44,31 +44,37 @@ namespace VirtualMind.TechnicalEvaluation.Biz
             return factory;
         }
 
-        public ConvertionDetail BuyCurrencies(int idUser, string amount, int iso)
+        public string BuyCurrencies(int idUser, string amount, int iso)
         {
             var factory = GetFactory(iso);
             var currency = factory.GetDetail();
             var amountToBuy = Double.Parse(amount, new CultureInfo("en-US")) / currency.sale;
 
-            // valido el monto
             if (IsAValidAmount(amountToBuy, iso, idUser))
             {
-                // llamo al servicio
-                return new ConvertionDetail();
-            }
+                _uOWDB.UserTransactionRepository.Insert(
+                    new UserTransac()
+                    {
+                        idUsuario = idUser,
+                        amount = amountToBuy.ToString(),
+                        isoCurrency = iso.ToString(),
+                        price = currency.sale.ToString(),
+                        ts = DateTime.Now
+                    }.ToEntity());
 
-            return new ConvertionDetail()
+                _uOWDB.Save();
+                return "OK";
+            }
+            else
             {
-                buy = 100,
-                sale = 100,
-                date = "100"
-            };
+                throw new ConflictException("Monto no permitido");
+            }
         }
 
         private bool IsAValidAmount(double amountToBuy, int iso, int id)
         {
             var validate = true;
-            var amountStore = getAmountBought(id);
+            var amountStore = getAmountBought(id, iso);
             switch(iso)
             {
                 case (int)Currency.USD:
@@ -77,17 +83,16 @@ namespace VirtualMind.TechnicalEvaluation.Biz
                 case (int)Currency.BRL:
                     validate = amountToBuy > 300 ? false : (amountToBuy + amountStore) > 300 ? false : true;
                     break;
-                default:
-                    throw new NotFoundException("Iso no valida");
             }
 
             return validate;
         }
 
-        private double getAmountBought(int id)
+        private double getAmountBought(int id, int iso)
         {
-            var value = _uOWDB.UserTransactionRepository.Get(x => x.idUsuario == id && x.ts.Month == DateTime.Now.Month).AsEnumerable().ToDomain().FirstOrDefault();
-            return Double.Parse(value.amount, new CultureInfo("en-US"));
+            var user = _uOWDB.UserTransactionRepository.Get(x => x.idUsuario == id).AsEnumerable().ToDomain();
+            var sum = user.Where(x => x.isoCurrency == iso.ToString() && x.ts.Month == DateTime.Now.Month).Sum(x => Double.Parse(x.amount));
+            return sum;
         }
     }
 }
