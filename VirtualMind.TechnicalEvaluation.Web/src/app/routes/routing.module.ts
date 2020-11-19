@@ -2,11 +2,13 @@
 import { RouterModule, Routes } from '@angular/router';
 import { InicioComponent } from '../inicio/inicio.component';
 import { UnauthorizedComponent } from '../unauthorized/unauthorized.component';
-import { AuditarComponent } from '../auditar/auditar.component';
+import { QuoteComponent } from '../quote/quote.component';
+import { PurchaseComponent } from '../purchase/purchase.component';
 
 const appRoutes: Routes = [
     { path: '', redirectTo: 'Inicio', pathMatch: 'full' },
-    { path: 'Auditar', component: AuditarComponent },
+    { path: 'quote', component: QuoteComponent },
+    { path: 'purchase', component: PurchaseComponent },
     { path: 'Inicio', component: InicioComponent },
     { path: 'Unauthorized', component: UnauthorizedComponent },
     { path: '**', component: InicioComponent }

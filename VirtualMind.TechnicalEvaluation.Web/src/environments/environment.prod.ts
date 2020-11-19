@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  prefix: 'Sua.Auditoria.Api/api/',
-  server: 'http://d095srtec06/',
+  prefix: 'VirtualMind.TechnicalEvaluation.Api/api/',
+  server: '',
   version: 'v1/'
 };

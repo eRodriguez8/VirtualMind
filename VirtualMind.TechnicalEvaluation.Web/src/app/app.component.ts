@@ -7,49 +7,40 @@ import { Subscription } from 'rxjs';
 import { AppContextService } from './services/appContext.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  providers: [SecurityService]
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    providers: [SecurityService]
 })
 export class AppComponent implements OnInit {
 
-  public appContext: AppContext;
-  public busy: boolean;
+    public appContext: AppContext;
+    public busy: boolean;
 
-  constructor(
-    public securityService: SecurityService,
-    public context: AppContextService,
-    private router: Router) {
-    this.busy = true;
-  }
+    constructor(
+        public securityService: SecurityService,
+        public context: AppContextService,
+        private router: Router) {
+        this.busy = true;
+    }
 
-  ngOnInit() {
-    this.getUsuario();
-    this.getRegiones();
-  }
+    ngOnInit() {
+        this.getUsuario();
+    }
 
-  public getUsuario(): void {
-    this.securityService.getAppContext()
-      .subscribe(data => {
-        this.busy = false;
-        if (data !== undefined) {
-          if (data.usuario.perfiles.length !== 0) {
-            this.appContext = data;
-            this.context.setActualContext(data);
-          } else {
-            this.router.navigateByUrl('Unauthorized');
-          }
-        } else {
-          this.router.navigateByUrl('Unauthorized');
-        }
-      });
-  }
-  public getRegiones(): void {
-    this.securityService.getRegiones()
-      .subscribe(data => {
-        if (data !== undefined) {
-          this.context.setRegiones(data);
-        }
-      });
-  }
+    public getUsuario(): void {
+        this.securityService.getAppContext()
+            .subscribe(data => {
+                this.busy = false;
+                if (data !== undefined) {
+                    if (data.usuario.perfiles.length !== 0) {
+                        this.appContext = data;
+                        this.context.setActualContext(data);
+                    } else {
+                        this.router.navigateByUrl('Unauthorized');
+                    }
+                } else {
+                    this.router.navigateByUrl('Unauthorized');
+                }
+            });
+    }
 }

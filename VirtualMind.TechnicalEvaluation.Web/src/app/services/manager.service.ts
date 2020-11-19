@@ -10,11 +10,9 @@ import { HandleErrorComponent } from '../handle-error/handle-error.component';
 
 export class HttpManagerService {
 	public url: string;
-	public urlExtAcc: string;
 
 	constructor(private http: HttpClient, private modalService: NgbModal) {
 		this.url = `${environment.server}${environment.prefix}${environment.version}`;
-		this.urlExtAcc = `${environment.server}Sua.Accesos.Api/api/${environment.version}`;
 	}
 
 	public get<T>(route: string): Observable<T> {
@@ -31,13 +29,6 @@ export class HttpManagerService {
 
 	public post<T>(route: string, objeto: any): Observable<T> {
 		return this.http.post<T>(this.url + route, objeto, { withCredentials: true })
-			.pipe(
-				catchError(this.handleError<T>())
-			);
-	}
-
-	public getExtAcc<T>(route: string): Observable<T> {
-		return this.http.get<T>(this.urlExtAcc + route, { withCredentials: true })
 			.pipe(
 				catchError(this.handleError<T>())
 			);

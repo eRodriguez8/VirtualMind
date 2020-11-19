@@ -12,9 +12,8 @@ export class HelperService {
         let dataArray = this.s2ab(atob(data));
         try {
             let blob = new Blob([dataArray], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64' });
-            // let blob = new Blob([new Uint8Array(data)]);
+            
             try {
-                // let blob = new Blob([new Uint8Array(data)]);
                 let blob = new Blob([dataArray], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64' });
                 window.navigator.msSaveOrOpenBlob(blob, this.cleanUpSpecialChars(fileName) + ".xlsx");
             }

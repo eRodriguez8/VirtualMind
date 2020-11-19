@@ -4,8 +4,6 @@ import { ToastrService } from 'ngx-toastr';
 declare var $: any;
 import * as moment from 'moment';
 
-
-
 @Injectable()
 export class HelperProvider {
 

@@ -6,8 +6,7 @@ import { Region } from '../models/region';
 export class AppContextService {
 
     private appContext: AppContext;
-    private regiones: Region[];
-
+    
     constructor() {}
 
     setActualContext(context: AppContext) {
@@ -16,11 +15,5 @@ export class AppContextService {
 
     getActualContext() {
         return this.appContext;
-    }
-    setRegiones(regiones: Region[]) {
-      this.regiones = regiones;
-    }
-    getRegiones() {
-      return this.regiones;
     }
 }

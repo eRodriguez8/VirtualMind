@@ -23,12 +23,10 @@ import { NgBusyModule } from 'ng-busy';
 import { ToastrModule } from 'ngx-toastr';
 import { MultiselectDropdownModule } from 'angular-2-dropdown-multiselect';
 import { HandleErrorComponent } from './handle-error/handle-error.component';
-import { AuditarComponent } from './auditar/auditar.component';
-import { FiltroConsultaComponent } from './auditar/filtro-consulta/filtro-consulta.component';
+import { QuoteComponent } from './quote/quote.component';
+import { PurchaseComponent } from './purchase/purchase.component';
 import { Daterangepicker } from 'ng2-daterangepicker';
-import { ContenedoresComponent } from './auditar/contenedores/contenedores.component';
-import { LimpiezaComponent } from './auditar/limpieza/limpieza.component';
-import { PosicionesComponent } from './auditar/posiciones/posiciones.component';
+
 
 @NgModule({
     imports: [
@@ -53,10 +51,8 @@ import { PosicionesComponent } from './auditar/posiciones/posiciones.component';
     declarations: [AppComponent, HeaderComponent,
         InicioComponent, UnauthorizedComponent,
         MenuComponent, HandleErrorComponent,
-        AuditarComponent, FiltroConsultaComponent,
-        ContenedoresComponent, LimpiezaComponent,
-        PosicionesComponent
-      ],
+        QuoteComponent, PurchaseComponent
+    ],
     bootstrap: [AppComponent],
     providers: [
         HttpManagerService,

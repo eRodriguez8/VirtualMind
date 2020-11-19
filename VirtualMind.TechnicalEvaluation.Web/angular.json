@@ -48,12 +48,12 @@
           },
           "configurations": {
             "ide": {
-              "fileReplacements": [{
-
-                "replace": "src/environments/environment.ts",
-                "with": "src/environments/environment.ide.ts"
-
-              }],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.ide.ts"
+                }
+              ],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -65,12 +65,12 @@
               "buildOptimizer": true
             },
             "prod": {
-              "fileReplacements": [{
-
-                "replace": "src/environments/environment.ts",
-                "with": "src/environments/environment.prod.ts"
-              }],
-
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -82,12 +82,12 @@
               "buildOptimizer": true
             },
             "prepro": {
-              "fileReplacements": [{
-
-                "replace": "src/environments/environment.ts",
-                "with": "src/environments/environment.prepro.ts"
-              }],
-
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prepro.ts"
+                }
+              ],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -99,12 +99,12 @@
               "buildOptimizer": true
             },
             "desa": {
-              "fileReplacements": [{
-
-                "replace": "src/environments/environment.ts",
-                "with": "src/environments/environment.desa.ts"
-              }],
-
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.desa.ts"
+                }
+              ],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -193,5 +193,8 @@
       }
     }
   },
-  "defaultProject": "VirtualMind"
+  "defaultProject": "VirtualMind",
+  "cli": {
+    "analytics": false
+  }
 }
